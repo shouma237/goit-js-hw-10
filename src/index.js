@@ -1,6 +1,9 @@
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 // import 'slim-select/dist/slimselect.css';
 
+import Notiflix from 'notiflix';
+import SlimSelect from 'slim-select';
+
 ////////////////////////////////////////////////////////////
 
 const breedSelectEl = document.querySelector('.breed-select');
@@ -72,5 +75,5 @@ function onError() {
   // Show error Message
   errorEl.classList.remove('is-hidden');
   //   Hide select element
-  breedSelectEl.classList.add('is-hidden');
+  Notiflix.Notify.warning(breedSelectEl.classList.add('is-hidden'));
 }
